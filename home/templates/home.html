@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping site</title>
+
+    <!-- Font awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- home.css link  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <div class="header__logo-box">
+                    <img src="{{ MEDIA_URL }}headerLogo.png" class="header__logo-img" alt="Logo">
+                </div>
+
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#" class="header__link">Каталог</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">O компании</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Контакты</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Вопросы</a>
+                    </li>
+                </ul>
+
+                <div class="header__icon-box">
+                    <button class="header__icon-btns">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button class="header__icon-btns">
+                        <i class="fa-solid fa-shopping-bag"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>

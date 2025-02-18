@@ -11,7 +11,7 @@ class Venue(models.Model):
 class UserManager(BaseUserManager):
     def create_user(self, username, password=None):
         if not username:
-            raise  ValueError("Foydalanuvchi topilmadi")
+            raise ValueError("Foydalanuvchi topilmadi")
         
         user = self.model(username=username)
         user.set_password(password)
@@ -32,4 +32,8 @@ class User(AbstractBaseUser):
     
     objects = UserManager()
     
-    USERNAME_FIELD = "login"
+    USERNAME_FIELD = "username"
+    REQUIRED_FIELDS = []
+    
+    def __str__(self):
+        return self.username

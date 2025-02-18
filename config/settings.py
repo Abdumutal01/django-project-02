@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'home',
 ]
 
@@ -137,3 +136,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTHENTICATION_BACKENDS = [
+    'home.authentication.custom_backend.CustomBackend',
+    'django.contrib.auth.backends.ModelBackend',  # Standart autentifikatsiya backend
+]
+
+# settings.py
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
